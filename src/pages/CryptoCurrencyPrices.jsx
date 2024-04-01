@@ -25,7 +25,6 @@ const CryptoCurrencyPrices = () => {
         setPriceData(dataArray);
         setLoader(false);
       } catch (err) {
-        console.log(error.message);
         setError(err.message);
         setLoader(false);
       }

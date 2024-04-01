@@ -56,14 +56,14 @@ const Graph = () => {
 
         setGraphData(graphData);
       } catch (err) {
-        console.log(err);
+ 
         setError(err.message);
       }
     };
     getGrpahData();
   }, []);
 
-  console.log(graphData);
+
 
   return (
     <div className="pt-20 pl-10">

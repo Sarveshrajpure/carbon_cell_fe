@@ -14,7 +14,6 @@ const NavBar = () => {
   const { pathname } = location;
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(pathname);
 
   const links = [
     {

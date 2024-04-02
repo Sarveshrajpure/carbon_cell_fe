@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   FireIcon,
@@ -8,10 +8,21 @@ import {
   Bars3BottomRightIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import useScreenSize from "../utils/useScreenSize";
 
 const NavBar = ({ isOpen, setIsOpen }) => {
   const location = useLocation();
   const { pathname } = location;
+
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize.width < 768) {
+      setIsOpen(false);
+    }
+  }, [screenSize]);
+
+  console.log(screenSize);
 
   const links = [
     {
@@ -40,8 +51,8 @@ const NavBar = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`shadow-md ${
-        isOpen ? "w-[100%] lg:w-[15%] " : "w-[100%] h-[8%] lg:w-[5%] lg:h-full"
-      } h-full  z-100 absolute top-0 left-0 
+        isOpen ? "w-[100%] lg:w-[15%] h-full" : "w-[100%] lg:w-[5%] lg:h-full"
+      }   z-100 absolute top-0 left-0 
       transition-all duration-100 ease-in-out
 
       `}
@@ -86,14 +97,23 @@ const NavBar = ({ isOpen, setIsOpen }) => {
            bg-[#1A1E1C]  md:flex md:flex-col "
           >
             {links.map((item, index) => (
-              <li className="font-semibold mx-2 my-2 " key={item.name}>
+              <li className="font-semibold mx-2 my-8 lg:my-2 " key={item.name}>
                 <div
                   className={`flex gap-2 items-center ${
                     pathname === item.link ? "text-[#2AB42A]" : "text-white"
                   }`}
                 >
                   <div className="w-4 h-4 ">{item.icon}</div>
-                  <Link to={item.link}>{item.name}</Link>
+                  <Link
+                    to={item.link}
+                    onClick={() => {
+                      if (screenSize.width < 768) {
+                        setIsOpen(false);
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </Link>
                 </div>
               </li>
             ))}

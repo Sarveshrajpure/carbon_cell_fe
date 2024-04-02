@@ -6,12 +6,16 @@ import Graph from "./pages/Graph";
 import CryptoCurrencyPrices from "./pages/CryptoCurrencyPrices";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div className="app">
       <HashRouter>
         <div className=" lg:flex w-full">
-          <div className={`${isOpen ? "fixed w-[100%] h-full lg:w-[30%] lg:static " : "w-[10%]"} `}>
+          <div
+            className={`${
+              isOpen ? "fixed h-[100%] w-[100%] lg:h-full lg:w-[30%] lg:static " : "w-[10%]"
+            } `}
+          >
             <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div className={`${isOpen ? "lg:w-[100%]" : "w-[100%] lg:w-[90%]"} `}>

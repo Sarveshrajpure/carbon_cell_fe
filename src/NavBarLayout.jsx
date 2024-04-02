@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 export default function NavBarSideBarLayout() {
   return (
-    <div>
+    <div className="h-full ">
       <NavBar />
 
       <div>

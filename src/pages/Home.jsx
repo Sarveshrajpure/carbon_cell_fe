@@ -35,13 +35,13 @@ const Home = () => {
     getCryptoPrice();
   }, []);
   return (
-    <div className="h-content">
+    <div className="">
       <div>
-        <div className=" lg:flex  ">
-          <div className="lg:w-[60%]  ">
-            <Graph />
+        <div className=" lg:flex lg:justify-between  ">
+          <div className="lg:w-[40%]  ">
+            <Graph justifyGraph={"justify-start"} />
           </div>
-          <div className="">
+          <div className="lg:w-[60%]">
             <CryptoWallet />
           </div>
         </div>

@@ -33,7 +33,7 @@ const CryptoCurrencyPrices = () => {
     getCryptoPrice();
   }, []);
   return (
-    <div className="mt-16 h-screen">
+    <div className="mt-16 h-full">
       <div className="flex items-center justify-center pt-5 ">
         <div className="text-[#f7931a] text-2xl font-semibold  ">₿</div>
         <div

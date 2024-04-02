@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { FallingLines } from "react-loader-spinner";
 
-const Graph = () => {
+const Graph = ({ justifyGraph }) => {
   const [graphData, setGraphData] = useState("");
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
@@ -65,11 +65,11 @@ const Graph = () => {
   return (
     <div className="pt-20 ml-10">
       {loader ? (
-        <div className="flex justify-center">
+        <div className={`flex ${justifyGraph ? justifyGraph : "justify-center"}`}>
           <FallingLines height="50" width="50" />
         </div>
       ) : (
-        <div className="w-[90%]  lg:w-[70%] p-4 bg-[#1A1E1C] rounded-md ">
+        <div className="w-[90%]  lg:w-[600px] p-4 bg-[#1A1E1C] rounded-md ">
           {error ? <p className="text-red-400">Error ! - {error}</p> : ""}
           {graphData ? <Line data={graphData} options={options} /> : ""}
         </div>

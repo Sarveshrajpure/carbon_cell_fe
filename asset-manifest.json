@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/carbon_cell_fe/static/css/main.c525eb48.css",
-    "main.js": "/carbon_cell_fe/static/js/main.368c13d4.js",
+    "main.js": "/carbon_cell_fe/static/js/main.86ab7c47.js",
     "static/js/453.92ccd0b3.chunk.js": "/carbon_cell_fe/static/js/453.92ccd0b3.chunk.js",
     "index.html": "/carbon_cell_fe/index.html",
     "main.c525eb48.css.map": "/carbon_cell_fe/static/css/main.c525eb48.css.map",
-    "main.368c13d4.js.map": "/carbon_cell_fe/static/js/main.368c13d4.js.map",
+    "main.86ab7c47.js.map": "/carbon_cell_fe/static/js/main.86ab7c47.js.map",
     "453.92ccd0b3.chunk.js.map": "/carbon_cell_fe/static/js/453.92ccd0b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c525eb48.css",
-    "static/js/main.368c13d4.js"
+    "static/js/main.86ab7c47.js"
   ]
 }

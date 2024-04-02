@@ -17,7 +17,7 @@ const NavBar = ({ isOpen, setIsOpen }) => {
   const screenSize = useScreenSize();
 
   useEffect(() => {
-    if (screenSize.width < 768) {
+    if (screenSize.width < 850) {
       setIsOpen(false);
     }
   }, [screenSize]);

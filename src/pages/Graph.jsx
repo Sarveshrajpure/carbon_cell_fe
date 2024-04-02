@@ -56,23 +56,20 @@ const Graph = () => {
 
         setGraphData(graphData);
       } catch (err) {
- 
         setError(err.message);
       }
     };
     getGrpahData();
   }, []);
 
-
-
   return (
-    <div className="pt-20 pl-10">
+    <div className="pt-20 ml-10">
       {loader ? (
         <div className="flex justify-center">
           <FallingLines height="50" width="50" />
         </div>
       ) : (
-        <div className="w-[90%] md:w-[50%] p-5 bg-[#1A1E1C] rounded-md ">
+        <div className="w-[90%]  lg:w-[70%] bg-[#1A1E1C] rounded-md ">
           {error ? <p className="text-red-400">Error ! - {error}</p> : ""}
           {graphData ? <Line data={graphData} options={options} /> : ""}
         </div>

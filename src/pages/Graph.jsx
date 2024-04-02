@@ -69,7 +69,7 @@ const Graph = () => {
           <FallingLines height="50" width="50" />
         </div>
       ) : (
-        <div className="w-[90%]  lg:w-[70%] bg-[#1A1E1C] rounded-md ">
+        <div className="w-[90%]  lg:w-[70%] p-4 bg-[#1A1E1C] rounded-md ">
           {error ? <p className="text-red-400">Error ! - {error}</p> : ""}
           {graphData ? <Line data={graphData} options={options} /> : ""}
         </div>
